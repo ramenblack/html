@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
 <title>Keegy HTML</title>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=10">
@@ -16,6 +25,32 @@
       line-height: 1.8;
       color: #f5f6f7;
   }
+     }
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('file:///C:html/IMG/seattle.jpg');
+    min-height: 100%;
+}
+     .w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
 
   </style>
 </head>
@@ -37,67 +72,24 @@
       <ul class="nav navbar-nav navbar-right">
           <li><a href="#test2">about me</a></li>
           <li><a href="#test">portfolio</a></li>    
-        <li><a href="/html">html</a></li>
-          <li><a href="https://github.com/ramenblack">git</a></li>
+          <li><a href="#test3">let's get in touch</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 </div>
-
-
-
-  </body>
- <div class="w3-content" style="max-width:2000px;margin-top:46px">
-  <img class="mySlides" src="file:///C:html/IMG/guitar.jpeg" onclick="window.location.href = 'file:///C:/html/guitar.html'" style="width:100%">
-  <img class="mySlides" src="file:///C:html/IMG/coffee.jpg" onclick="window.location.href = 'file:///C:/html/coffee.html'" style="width:100%">
-  <img class="mySlides" src="file:///C:html/IMG/workbench.jpg" onclick="window.location.href = 'file:///C:/html/dog.html'" style="width:100%">
-  <img class="mySlides" src="file:///C:html/IMG/camera.jpg" onclick="window.location.href = '#test'" style="width:100%">
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+ <body>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hi. <span class="w3-hide-small">I'm</span> Keegan.</span>
+  </div>
 </div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-    var slideIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1} 
-    x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 4000); // Change image every 4 seconds
-}
-</script>
-
-    
-  <br />
-
+<h4 id="test2"></h4>
+<br />
 <div class="w3-container">
-    <h4 id="test2">SOME TEXT</h4>
-    	<P>><Center><font color="#7E7E7E" size="20">About me.</font></Center></P>
+    	<P><Center><font color="#7E7E7E" size="20">About me.</font></Center></P>
 <CENTER><img src="C:/html/IMG/keegg.jpg" align="center" width="200" height="200"></CENTER>
 	<br>
     <h2><center><font color="#7E7E7E">Who I am.</font></center></h2>
@@ -118,31 +110,33 @@ function carousel() {
     <p><center><font color="#7E7E7E">learn more: <a href="file:///C:/html/guitar.html">I play guitar</a>, <a href="file:///C:/html/coffee.html">I drink coffee</a>, <a href="file:///C:/html/dogs.html">I like dogs</a>.
 </font></center></p>
 </section>
+    </body>
     <body>
-  <h4 id="test">SOME TEXT</h4>
- <div class="w3-red">
+  <h4 id="test"></h4>
+ <div class="w3-flat-wet-asphalt
+">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">portfolio</h2>
-      <p class="w3-opacity w3-center"><i>all photos taken and processed by ya boy</i></p><br>
+      	<P><Center><font color="#ffffff" size="20">My Portfolio.</font></Center></P>
+      <p class="w3-opacity w3-center"><i>I'll let my work speak for itself.</i></p><br>
 		  <!-- Grid for photos -->
   <!-- Photo Grid -->
 <div class="w3-row" id="myGrid" style="margin-bottom:128px">
   <div class="w3-third">
     <img src="C:\html\IMG\guitaro.png" style="width:100%">
     <img src="C:\html\IMG\gate.JPG" style="width:100%">
-       <img src="C:\html\IMG\sign.PNG" style="width:100%">
+       <img src="C:\html\IMG\flowersign.PNG" style="width:100%">
   </div>
 
   <div class="w3-third">
-   <img src="C:\html\IMG\doghand.JPG" style="width:100%">
+   <img src="C:\html\IMG\doghands.JPG" style="width:100%">
     <img src="C:\html\IMG\guitarhand.PNG" style="width:100%">
     <img src="C:\html\IMG\flowers.png" style="width:100%">
   </div>
 
   <div class="w3-third">
      <img src="C:\html\IMG\theatre.PNG" style="width:100%">        
-      <img src="C:\html\IMG\bloom.PNG" style="width:100%">
-
+      <img src="C:\html\IMG\blooms.PNG" style="width:100%">
+      <img src="C:\html\IMG\windos.jpg" style="width:100%">
 
   </div>
 </div>
@@ -153,10 +147,12 @@ function carousel() {
     </div>
   <!-- End Portfolio Section -->
 <div class="w3-container">
-    <h4 id="test3">SOME TEXT</h4>
-    	<P>><Center><font color="#7E7E7E" size="20">Let's get in touch.</font></Center></P>
+    <h4 id="test3"></h4>
+    <br>
+    <br>
+    	<P><Center><font color="#7E7E7E" size="20">Let's get in touch.</font></Center></P>
 	<br>
-    <h2><center><font color="#7E7E7E">Here's where you can find me.</font></center></h2>
+    <h2><center><font color="#7E7E7E">Here's where you can find me:</font></center></h2>
     <br>
     <br>
     <div class="w3-row w3-center" id="myGrid" style="margin-bottom:128px margin-width:5px" >
@@ -167,10 +163,31 @@ function carousel() {
         <a href= "https://www.instagram.com/dinkykung/"><img src="C:\html\IMG\instagram.png"/ height="50" width="50" margin-left:0px margin-right:0px/></a>
     </div>
     <div class="w3-third" style="margin-left:0px">
-         <img src="C:\html\IMG\github.png"/ height="50" width="50" margin-left:0px/>
+        <a href= "https://www.github.com/ramenblack/"><img src="C:\html\IMG\github.png"/ height="50" width="50" margin-left:0px/></a>
     </div>
 </div>
     <br>
+    <br>
+    <!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;" class="w3-grayscale-max"></div>
+<script>
+function myMap() {
+  myCenter=new google.maps.LatLng(47.608013, -122.335167);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm7dxDV86SXBYufvAcaDDnn2ZNffkbmuE&callback=myMap"></script>
+
     
   <hr>
 </div>
